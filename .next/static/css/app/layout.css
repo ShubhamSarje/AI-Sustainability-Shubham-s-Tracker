@@ -1,0 +1,73 @@
+/*!*************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./app/globals.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************/
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+
+:root {
+  --bg-deep:      #050c07;
+  --bg-mid:       #07110a;
+  --bg-surface:   #0a180d;
+  --glass-bg:     rgba(15, 30, 18, 0.55);
+  --glass-bg2:    rgba(20, 42, 26, 0.45);
+  --glass-border: rgba(74, 200, 100, 0.14);
+  --glass-border2:rgba(74, 200, 100, 0.28);
+  --glow:         rgba(74, 200, 100, 0.06);
+  --glow2:        rgba(74, 200, 100, 0.12);
+  --green:        #4ac864;
+  --green2:       #2d9e47;
+  --green3:       #1a5e2b;
+  --green-dim:    rgba(74, 200, 100, 0.18);
+  --amber:        #f0a030;
+  --amber-dim:    rgba(240, 160, 48, 0.15);
+  --red:          #f05050;
+  --red-dim:      rgba(240, 80, 80, 0.15);
+  --blue:         #50a8f0;
+  --blue-dim:     rgba(80, 168, 240, 0.15);
+  --text:         #d8f0dc;
+  --text2:        #7aaa84;
+  --text3:        #3d6644;
+  --mono:         'DM Mono', monospace;
+  --sans:         'DM Sans', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  background: var(--bg-deep);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 10% 20%, rgba(30,90,45,0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 90% 80%, rgba(20,70,35,0.14) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 40% at 50% 50%, rgba(10,40,18,0.10) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(74,200,100,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(74,200,100,0.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 6px var(--green); }
+  50%       { opacity: 0.4; box-shadow: 0 0 2px var(--green); }
+}
+
